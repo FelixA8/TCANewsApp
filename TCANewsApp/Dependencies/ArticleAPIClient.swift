@@ -16,7 +16,7 @@ struct NewsAPIClient {
 extension NewsAPIClient: DependencyKey {
     static let liveValue = NewsAPIClient(
         fetchAllNews: {
-            let APIKEY = "8a8de5f43c4842ddac4875ee7e2dba68"
+            let APIKEY = YOUR_API_KEY
             let urlString = "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=\(APIKEY)"
             
             guard let newsUrl = URL(string: urlString) else { throw URLError(.badURL) }
